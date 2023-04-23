@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "poppins", sans-serif;
+}
+
+:root {
+  --bg-color:#fdfdfd;
+  --text-color:#333;
+  --main-color:#754ef9;
+  --shadow-color:rgba(0,0,0,.2) ;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 7%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  z-index: 100;
+}
+
+.logo {
+  color: var(--main-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.navbar a {
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 3rem;
+  position: relative;
+  z-index: 50;
+}
+
+.navbar > a:before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: -6px;
+  transition: 0.5s ease;
+}
+
+.navber > a:hover::before {
+  width: 100%;
+}
+
+.tools a {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--bg-color);
+  margin-right: 2rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 7% 2rem;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.home .home-content {
+  max-width: 44rem;
+}
+
+.home .home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 0.3;
+  font-family: "poppins", sans-serif;
+}
+
+.home .home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  font-family: "poppins", sans-serif;
+}
+
+.home .home-content p {
+  font-size: 1.6rem;
+}
+
+.home-content .social-media a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.2rem solid var(--main-color);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+  font-size: 2rem;
+  transition: 0.5s ease;
+  margin: 2.5rem 1.5rem 3rem 0;
+}
+.home-content .social-media a:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+ .btn {
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: var(--main-color);
+  border: 0.2rem solid transparent;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.5rem --shadow-color;
+  transition: 0.5s ease;
+}
+ .btn:hover {
+  background: transparent;
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+
+.home .profession-container {
+  width: 768px;
+  height: 768px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.home .profession-container .profession-box {
+  width: 768px;
+  height: 768px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: purple;
+  border-radius: 50%;
+}
+
+.home .profession-container .overlay {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 0;
+  border-top: 384px solid var(--main-color);
+  border-right: 384px solid var(--main-color);
+  border-bottom: 384px solid var(--main-color);
+  border-left: 384px solid transparent;
+}
+.services {
+    min-height: auto;
+    padding-bottom: 7rem;
+  }
+  
+  span {
+    color: var(--main-color);
+  }
+  
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  
+  .about-img img {
+    width: 40vw;
+  }
+  
+  .heading {
+    font-size: 45px;
+  }
+  
+  .about-content h2 {
+    text-align: left;
+    line-height: 3rem;
+  }
+  
+  .about-content h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  
+  .about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 1rem 1rem 0;
+  }
+  
+  .services .services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .services-container .services-box {
+    flex: 1 1 30rem;
+    padding: 3rem 2rem 4rem;
+    background: var(--bg-color);
+    border-radius: 2rem;
+    box-shadow: 0 1px 5px var(--shadow-color);
+    text-align: center;
+    border-top: 6px solid var(--main-color);
+    border-bottom: 6px solid var(--main-color);
+    transition: 0.5s ease;
+  }
+  
+  .services-container .services-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0.1rem 0.2rem var(--shadow-color);
+  }
+  
+  .services-box h3 {
+    font-size: 24px;
+    transition: 0.5s ease;
+  }
+  
+  .services-box:hover h3 {
+    color: var(--main-color);
+  }
+  
+  .services-box p {
+    margin: 16px 0;
+    font-size: 16px;
+  }
+  
+  .services h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .portfolio{
+    padding-bottom: 10rem;
+  }
+  .portfolio h2{
+    margin-bottom: 4rem;
+  }
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+.portfolio-container .portfolio-box{
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0 ,0 ,0,0.1);
+  overflow: hidden;
+  display: flex;
+}
+.portfolio-box img{
+  width: 100%;
+  transition:.5s ease;
+}
+.portfolio-box:hover img{
+  transform:scale(1.1);
+}
+.portfolio-box .portfolio-layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,.1),var(--main-color));
+  color: var(--bg-color);
+  padding: 0 4rem;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.portfolio-box:hover .portfolio-layer{
+  opacity: 1;
+}
+.portfolio-layer h4{
+  font-size: 3rem;
+}
+.portfolio-layer p{
+  font-size: 1.6rem;
+  margin: .3rem 0 1rem;
+}
+.portfolio-layer a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--bg-color);
+}
+.portfolio-layer a i{
+  font-size: 2rem;
+  color: #333;
+}
+/* testimonial section design  */
+.heading {
+  font-size: 45px;
+  text-align: center;
+}
+.testimonial-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  padding: 5rem 1rem;
+}
+.testimonial-container .testimonial-wrapper{
+  position: relative;
+  max-width: 90rem;
+  width: 100%;
+  padding: 5rem;
+}
+.testimonial-content .testimonial-slide{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2rem;
+  box-shadow: 0 .1rem .5rem var(--shadow-color);
+  background: var(--bg-color);
+  padding: 3rem 5rem;
+  border-top: .8rem solid var(--main-color);
+  border-bottom: .8rem solid var(--main-color);
+}
+.testimonial-slide img{
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: .5rem solid var(--bg-color);
+  outline: .5rem solid var(--main-color);
+}
+.testimonial-slide h3{
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.testimonial-slide p{
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.contact h2{
+  margin-bottom: 3rem;
+}
+.contact form{
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact form .input-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border-radius: .8rem;
+  color: #333;
+  background: var(--bg-color);
+  margin: .7rem 0;
+  box-shadow: 0 .1rem .5rem var(--shadow-color);
+}
+.contact form .input-box input{
+  width: 49%;
+}
+.contact form textarea{
+  resize: none;
+}
+.contact form .btn{
+  cursor: pointer;
+  margin-top: 2rem;
+}
+/* footer design  */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 7%;
+  background: var(--main-color);
+}
+.footer-text p{
+  font-size: 1.6rem;
+  color: #fdfdfd;
+}
+.footer-icontop a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 8px;
+  background: var(--bg-color);
+}
